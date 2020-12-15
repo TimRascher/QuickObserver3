@@ -11,6 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "QuickObserver3",
+            type: .dynamic,
             targets: ["QuickObserver3"]),
     ],
     dependencies: [
