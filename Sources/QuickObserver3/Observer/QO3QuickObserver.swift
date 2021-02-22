@@ -12,6 +12,10 @@ public class QuickObserver<Actions, Errors: Error> {
         self.processorQueue = DispatchQueue(label: options.queueName, qos: options.dispatchQoS)
         self.options = options
     }
+    public static func mainThreadReporter() -> QuickObserver {
+        let options = Options(shouldReportOnMainThread: true)
+        return .init(options: options)
+    }
 }
 public extension QuickObserver {
     struct Options {

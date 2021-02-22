@@ -26,7 +26,7 @@ public protocol QuickActionable {
 public extension QuickActionable {
     func add(handler: @escaping QuickActionHandler<Actions>) {
         observer.add(handler: handler)
-        afterAdded(observer)
+        afterAdded()
     }
-    func afterAdded<Observer: AnyObject>(_ observer: Observer) { }
+    func afterAdded() { }
 }

@@ -28,7 +28,7 @@ public protocol QuickObservable {
 public extension QuickObservable {
     func add(handler: @escaping QuickHandler<Actions, Errors>) {
         observer.add(handler: handler)
-        afterAdded(observer)
+        afterAdded()
     }
-    func afterAdded<Observer: AnyObject>(_ observer: Observer) { }
+    func afterAdded() { }
 }
